@@ -1,17 +1,32 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+//import App from './App';
+//import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const Navbar = () => {
+  return (
+    <nav>
+      <a href="#">Gmail</a>
+        <a href="#">Sign in</a>
+        {/*<a href="#" class="app_icon"><span class="material-symbols-outlined">apps</span></a>*/}
+        {/*<a href="#"><img src="/Image/Google_profile_pix.jpeg" alt=""/></a>*/}
+    </nav>
+  );
+};
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+class Movie extends React.Component{
+  constructor(props){
+    super(props)
+  };
+  render(){
+    return(
+        <Navbar />
+    )
+  }
+}
+ReactDOM.render(
+  <App/>,
+  document.getElementById('root')
+)
